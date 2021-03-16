@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class gpa {
 	public static void main(String args[]) {
+		System.out.println("Hello student of Quinnipiac University, this is a GPA calculator.");
 		try {
 			FileWriter fileWriter = new FileWriter("gpa.txt");
 			PrintWriter out = new PrintWriter(fileWriter);
@@ -22,6 +23,7 @@ public class gpa {
 
 			int count = 0;
 			int credits = 0;
+			double gpa = 0;
 
 			while (count < numClasses) {
 				System.out.println("What is the name of class " + (count + 1));
@@ -36,10 +38,12 @@ public class gpa {
 				scan.nextLine();
 				credits = credits + cred;
 				double classValue = classValue();
+				gpa = gpa + classValue;
 				out.println(name + ": " + classValue);
 				count++;
 			}
 			out.println("Total Credits: " + credits);
+			out.print("GPA: " + gpa/numClasses);
 			out.close();
 			fileWriter.close();
 
