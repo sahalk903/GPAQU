@@ -18,11 +18,25 @@ public class gpa {
 			scan.nextLine();
 			System.out.println("How many classes are you taking?");
 			int numClasses = scan.nextInt();
+			scan.nextLine();
+			
+			int count = 0;
+			
+			while(count < numClasses)
+			{
+				System.out.println("What is the name of class " + (count + 1));
+				String name = scan.nextLine();
+				double classValue = classValue();
+				out.println(name + ": " + classValue);
+				count++;
+			}
+			
 			out.close();
 			fileWriter.close();
+			
 			} catch (IOException e) {
 			e.printStackTrace();
-		}	
+			}	
 		System.out.println("Your file has been stored.");
 	}	
 		
