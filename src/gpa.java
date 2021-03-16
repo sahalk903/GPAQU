@@ -6,12 +6,6 @@ public class gpa {
 		String grades = "";
 		String[] gradesletter = { "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D", "D-", "F" };
 		double[] gradesDecimal = { 4.0, 3.6, 3.2, 3.0, 2.6, 2.2, 2.0, 1.6, 1.2, 1.0, 0.0 };
-		double C1;
-		double C2;
-		double C3;
-		double C4;
-		double C5;
-		double C6;
 		double gradeAmount = 0;
 		double totalAmountCourse1 = 0;
 		double totalAmountCourse2 = 0;
@@ -38,204 +32,32 @@ public class gpa {
 		System.out.println("Please enter the CourseID for a class you are currently taking ");
 		message = scan.nextLine();
 
+		// Use the method below in a loop to account for any number of classes
+		
+	}
+	
+	public static double classValue()
+	{
 		Scanner console = new Scanner(System.in);
-
-		System.out.println("Please enter the amount of credits of the classes CourseID you just entered");
-		C1 = console.nextDouble();
+	
 		System.out.println("Please enter your letter grade, for instance, A, A-, B, C-, etc. for that course");
-		grades = console.next();
-
-		if (grades.equals("A"))
-			gradeAmount = 4.0;
-		else if (grades.equals("A-"))
-			gradeAmount = 3.6;
-		else if (grades.equals("B+"))
-			gradeAmount = 3.2;
-		else if (grades.equals("B"))
-			gradeAmount = 3.0;
-		else if (grades.equals("B-"))
-			gradeAmount = 2.6;
-		else if (grades.equals("C+"))
-			gradeAmount = 2.2;
-		else if (grades.equals("C"))
-			gradeAmount = 2.0;
-		else if (grades.equals("C-"))
-			gradeAmount = 1.6;
-		else if (grades.equals("D"))
-			gradeAmount = 1.2;
-		else if (grades.equals("D-"))
-			gradeAmount = 1.0;
-		else if (grades.equals("F"))
-			gradeAmount = 0.0;
-		else
-			System.out.println("Sorry, this is invalid. Please enter a valid letter grade. ");
-
-		totalAmountCourse1 = gradeAmount * C1;
-
-		System.out.println("Please enter the amount of credits for the next class that you would like to caculate");
-		C2 = console.nextDouble();
-		System.out.println("Please enter your letter grade, for instance, A, A-, B, C-, etc. for that course");
-		grades = console.next();
-
-		if (grades.equals("A"))
-			gradeAmount = 4.0;
-		else if (grades.equals("A-"))
-			gradeAmount = 3.6;
-		else if (grades.equals("B+"))
-			gradeAmount = 3.2;
-		else if (grades.equals("B"))
-			gradeAmount = 3.0;
-		else if (grades.equals("B-"))
-			gradeAmount = 2.6;
-		else if (grades.equals("C+"))
-			gradeAmount = 2.2;
-		else if (grades.equals("C"))
-			gradeAmount = 2.0;
-		else if (grades.equals("C-"))
-			gradeAmount = 1.6;
-		else if (grades.equals("D"))
-			gradeAmount = 1.2;
-		else if (grades.equals("D-"))
-			gradeAmount = 1.0;
-		else if (grades.equals("F"))
-			gradeAmount = 0.0;
-		else
-			System.out.println("Sorry, this is invalid. Please enter a valid letter grade.");
-
-		totalAmountCourse2 = gradeAmount * C2;
-
-		System.out.println("Please enter the amount of credits for the next class that you would like to caculate");
-		C3 = console.nextDouble();
-		System.out.println("Please enter your letter grade, for instance, A, A-, B, C-, etc. for that course");
-		grades = console.next();
-
-		if (grades.equals("A"))
-			gradeAmount = 4.0;
-		else if (grades.equals("A-"))
-			gradeAmount = 3.6;
-		else if (grades.equals("B+"))
-			gradeAmount = 3.2;
-		else if (grades.equals("B"))
-			gradeAmount = 3.0;
-		else if (grades.equals("B-"))
-			gradeAmount = 2.6;
-		else if (grades.equals("C+"))
-			gradeAmount = 2.2;
-		else if (grades.equals("C"))
-			gradeAmount = 2.0;
-		else if (grades.equals("C-"))
-			gradeAmount = 1.6;
-		else if (grades.equals("D"))
-			gradeAmount = 1.2;
-		else if (grades.equals("D-"))
-			gradeAmount = 1.0;
-		else if (grades.equals("F"))
-			gradeAmount = 0.0;
-		else
-			System.out.println("Sorry, this is invalid. Please enter a valid letter grade.");
-
-		totalAmountCourse3 = gradeAmount * C3;
-
-		System.out.println("Please enter the amount of credits for the next class that you would like to caculate");
-		C4 = console.nextDouble();
-		System.out.println("Please enter your letter grade, for instance, A, A-, B, C-, etc. for that course");
-		grades = console.next();
-
-		if (grades.equals("A"))
-			gradeAmount = 4.0;
-		else if (grades.equals("A-"))
-			gradeAmount = 3.6;
-		else if (grades.equals("B+"))
-			gradeAmount = 3.2;
-		else if (grades.equals("B"))
-			gradeAmount = 3.0;
-		else if (grades.equals("B-"))
-			gradeAmount = 2.6;
-		else if (grades.equals("C+"))
-			gradeAmount = 2.2;
-		else if (grades.equals("C"))
-			gradeAmount = 2.0;
-		else if (grades.equals("C-"))
-			gradeAmount = 1.6;
-		else if (grades.equals("D"))
-			gradeAmount = 1.2;
-		else if (grades.equals("D-"))
-			gradeAmount = 1.0;
-		else if (grades.equals("F"))
-			gradeAmount = 0.0;
-		else
-			System.out.println("Sorry, this is invalid. Please enter a valid letter grade.");
-
-		totalAmountCourse4 = gradeAmount * C4;
-
-		System.out.println("Please enter the amount of credits for the next class that you would like to caculate");
-		C5 = console.nextDouble();
-		System.out.println("Please enter your letter grade, for instance, A, A-, B, C-, etc. for that course");
-		grades = console.next();
-
-		if (grades.equals("A"))
-			gradeAmount = 4.0;
-		else if (grades.equals("A-"))
-			gradeAmount = 3.6;
-		else if (grades.equals("B+"))
-			gradeAmount = 3.2;
-		else if (grades.equals("B"))
-			gradeAmount = 3.0;
-		else if (grades.equals("B-"))
-			gradeAmount = 2.6;
-		else if (grades.equals("C+"))
-			gradeAmount = 2.2;
-		else if (grades.equals("C"))
-			gradeAmount = 2.0;
-		else if (grades.equals("C-"))
-			gradeAmount = 1.6;
-		else if (grades.equals("D"))
-			gradeAmount = 1.2;
-		else if (grades.equals("D-"))
-			gradeAmount = 1.0;
-		else if (grades.equals("F"))
-			gradeAmount = 0.0;
-		else
-			System.out.println("Sorry, this is invalid. Please enter a valid letter grade.");
-
-		totalAmountCourse5 = gradeAmount * C5;
-
-		System.out.println("Please enter the amount of credits for the next class that you would like to caculate");
-		C6 = console.nextDouble();
-		System.out.println("Please enter your letter grade, for instance, A, A-, B, C-, etc. for that course");
-		grades = console.next();
-
-		if (grades.equals("A"))
-			gradeAmount = 4.0;
-		else if (grades.equals("A-"))
-			gradeAmount = 3.6;
-		else if (grades.equals("B+"))
-			gradeAmount = 3.2;
-		else if (grades.equals("B"))
-			gradeAmount = 3.0;
-		else if (grades.equals("B-"))
-			gradeAmount = 2.6;
-		else if (grades.equals("C+"))
-			gradeAmount = 2.2;
-		else if (grades.equals("C"))
-			gradeAmount = 2.0;
-		else if (grades.equals("C-"))
-			gradeAmount = 1.6;
-		else if (grades.equals("D"))
-			gradeAmount = 1.2;
-		else if (grades.equals("D-"))
-			gradeAmount = 1.0;
-		else if (grades.equals("F"))
-			gradeAmount = 0.0;
-		else
-			System.out.println("Sorry, this is invalid. Please enter a valid letter grade.");
+		String grade = console.nextLine();
 		
-		totalAmountCourse6 = gradeAmount * C6;
-		
-		FinalAmount = totalAmountCourse1 + totalAmountCourse2 + totalAmountCourse3 + totalAmountCourse4 + totalAmountCourse5 + totalAmountCourse6;
-		FinalCredit = C1 + C2 + C3 + C4 + C5 + C6;
-		gpa = FinalAmount/FinalCredit;
-		
-		System.out.println("Your GPA is caculated to be: %.2f\n" + gpa);
+		if (grade.equals("A")) return 4.0;
+		else if(grade.equals("A-")) return 3.6;
+		else if(grade.equals("B+")) return 3.2;
+		else if(grade.equals("B")) return 3.0;
+		else if(grade.equals("B-")) return 2.6;
+		else if(grade.equals("C+")) return 2.2;
+		else if(grade.equals("C")) return 2.0;
+		else if(grade.equals("C-")) return 1.6;
+		else if(grade.equals("D")) return 1.2;
+		else if(grade.equals("D-")) return 1.0;
+		else if(grade.equals("F")) return 0.0;
+		else
+		{
+			System.out.println("Sorry, this is invalid. Please enter a valid letter grade.");
+			return classValue();
+		}
 	}
 }
