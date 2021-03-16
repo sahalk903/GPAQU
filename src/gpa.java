@@ -229,5 +229,13 @@ public class gpa {
 			gradeAmount = 0.0;
 		else
 			System.out.println("Sorry, this is invalid. Please enter a valid letter grade.");
+		
+		totalAmountCourse6 = gradeAmount * C6;
+		
+		FinalAmount = totalAmountCourse1 + totalAmountCourse2 + totalAmountCourse3 + totalAmountCourse4 + totalAmountCourse5 + totalAmountCourse6;
+		FinalCredit = C1 + C2 + C3 + C4 + C5 + C6;
+		gpa = FinalAmount/FinalCredit;
+		
+		System.out.println("Your GPA is caculated to be: %.2f\n" + gpa);
 	}
 }
