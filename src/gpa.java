@@ -7,10 +7,20 @@ import java.util.Scanner;
 public class gpa {
 	public static void main(String args[]) {
 		System.out.println("Hello student of Quinnipiac University, this is a GPA calculator.");
+		Scanner scan = new Scanner(System.in);
+		System.out.println("What would you like your gpa file to be named?");
+		String fileName = scan.nextLine();
 		try {
-			FileWriter fileWriter = new FileWriter("gpa.txt");
+			FileWriter fileWriter;
+			if(fileName.toLowerCase().contains(".txt"))
+			{
+				fileWriter = new FileWriter(fileName);
+			}
+			else
+			{
+				fileWriter = new FileWriter(fileName + ".txt");
+			}
 			PrintWriter out = new PrintWriter(fileWriter);
-			Scanner scan = new Scanner(System.in);
 			System.out.println("Please enter your full name");
 			out.println("Name: " + scan.nextLine());
 			System.out.println("Please enter your major ");
