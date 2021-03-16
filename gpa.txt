@@ -1,0 +1,7 @@
+Name: Jake Conrad
+Major: Computer Science
+QU ID: 123
+CSC109: 4.0
+CSC111: 2.0
+Total Credits: 4
+GPA: 2.5

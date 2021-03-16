@@ -1,6 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class gpa {
@@ -14,11 +15,32 @@ public class gpa {
 			out.println("Name: " + scan.nextLine());
 			System.out.println("Please enter your major ");
 			out.println("Major: " + scan.nextLine());
-			System.out.println("Please enter your QU ID number, located on your QU Card ");
-			out.println("QU ID: " + scan.nextInt());
-			scan.nextLine();
-			System.out.println("How many classes are you taking?");
-			int numClasses = scan.nextInt();
+			boolean valid = false;
+			do {
+				try {
+					System.out.println("Please enter your QU ID number, located on your QU Card ");
+					out.println("QU ID: " + scan.nextInt());
+					valid = true;
+				}
+				catch (InputMismatchException e) {
+					System.out.println("Please enter a valid ID number.");
+					scan.nextLine();
+				}
+			} while(!valid);
+			
+			valid = false;
+			int numClasses = 0;
+			do {
+				try {
+					System.out.println("How many classes are you taking?");
+					numClasses = scan.nextInt();
+					valid = true;
+				}
+				catch (InputMismatchException e) {
+					System.out.println("Please enter a valid number of classes.");
+					scan.nextLine();
+				}
+			} while(!valid);
 			scan.nextLine();
 
 			int count = 0;
@@ -38,12 +60,12 @@ public class gpa {
 				scan.nextLine();
 				credits = credits + cred;
 				double classValue = classValue();
-				gpa = gpa + classValue;
+				gpa = gpa + classValue*cred;
 				out.println(name + ": " + classValue);
 				count++;
 			}
 			out.println("Total Credits: " + credits);
-			out.print("GPA: " + gpa/numClasses);
+			out.print("GPA: " + gpa/credits);
 			out.close();
 			fileWriter.close();
 
